@@ -1,4 +1,8 @@
 import createMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
 
 const withMDX = createMDX({
   // Add markdown plugins here, if needed
@@ -6,8 +10,8 @@ const withMDX = createMDX({
     // If you use remark-gfm, you'll need to use next.config.mjs
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
-    remarkPlugins: [],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm, remarkParse, remarkRehype],
+    rehypePlugins: [rehypeStringify],
   },
 });
 

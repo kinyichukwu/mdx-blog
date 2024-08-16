@@ -1,24 +1,18 @@
----
-slug: research
-title: AI Research Papers
-tags: [ai, ml, cv, nlp, research]
----
-
 ### Summary
 
-| Project Name                             | Purpose                                                                | Type                     | Diffusers? | ComfyUI |
-| ---------------------------------------- | ---------------------------------------------------------------------- | ------------------------ | ---------- | ------- |
-| **Instant Family**                       | Identity-picture to picture                                            | `ID Prompt`              |            |         |
-| **Stylus Diffusion**                     | Selects LoRAs from a database                                          | `Meta-System`            |            |         |
-| **Align Your Steps**                     | Optimum scheduler; better images and better prompt adherence           | `Scheduler`              |            | ✅      |
-| **HiDiffusion**                          | Faster inference, better images at 2048px and 4096px                   | `Model-Modifier`         | ✅         | ✅      |
-| **Hyper-SD**                             | Only 1 - 8 steps in the scheduler; uses TCD                            | `LoRA` `Scheduler`       | ✅         | ✅      |
-| **VideoGigaGAN**                         | Upscale videos                                                         | `Model`                  |            |         |
-| **PanFusion**                            | 360-degree panoramic image generation                                  | `Model`                  |            |         |
+| Project Name                                 | Purpose                                                                | Type                     | Diffusers? | ComfyUI |
+| -------------------------------------------- | ---------------------------------------------------------------------- | ------------------------ | ---------- | ------- |
+| **Instant Family**                           | Identity-picture to picture                                            | `ID Prompt`              |            |         |
+| **Stylus Diffusion**                         | Selects LoRAs from a database                                          | `Meta-System`            |            |         |
+| **Align Your Steps**                         | Optimum scheduler; better images and better prompt adherence           | `Scheduler`              |            | ✅      |
+| **HiDiffusion**                              | Faster inference, better images at 2048px and 4096px                   | `Model-Modifier`         | ✅         | ✅      |
+| **Hyper-SD**                                 | Only 1 - 8 steps in the scheduler; uses TCD                            | `LoRA` `Scheduler`       | ✅         | ✅      |
+| **VideoGigaGAN**                             | Upscale videos                                                         | `Model`                  |            |         |
+| **PanFusion**                                | 360-degree panoramic image generation                                  | `Model`                  |            |         |
 | **TCD (Trajectory Consistent Distillation)** | Turbo Scheduler                                                        | `Scheduler`              | ✅         | ✅      |
-| **Stable Diffusion 3**                   | Text-To-Image Model                                                    | `Model`                  |            |         |
-| **PhotoMaker**                           | Uses its own model to process images; adds identity to existing models | `Model` `Model-Modifier` |            |         |
-| **GigaGAN**                              | Text to image                                                          | `Model`                  |            |         |
+| **Stable Diffusion 3**                       | Text-To-Image Model                                                    | `Model`                  |            |         |
+| **PhotoMaker**                               | Uses its own model to process images; adds identity to existing models | `Model` `Model-Modifier` |            |         |
+| **GigaGAN**                                  | Text to image                                                          | `Model`                  |            |         |
 
 ---
 
@@ -135,7 +129,6 @@ tags: [ai, ml, cv, nlp, research]
 - **Date**: March 2024
 - **Authors**: Jianbin Zheng, Southern China University of Technology
 - **Paper**: [https://arxiv.org/abs/2402
-
 
 export default ({ children }) => {
   return <div className="prose dark">{children}</div>;

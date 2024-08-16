@@ -3,3 +3,60 @@
 @tailwind utilities;
 
 
+body{
+    background-color: #111111;
+}
+
+.prose{
+    padding: 20px;
+    overflow-x:auto ;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.prose *{
+    color: white;
+}
+
+hr{
+    opacity: 0.1;
+}
+
+.prose table{
+    width: 100%;
+    overflow-x:auto ;
+    border-collapse: collapse;
+}
+
+.prose table, .prose td, .prose th{
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.prose h2{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.prose :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+    padding-inline-start: 0.5714286em !important;
+}
+
+.prose :where(thead th:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+    padding-inline-start: 0.5714286em !important;
+}
+
+.prose :where(thead th:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+    padding-inline-end: 0.5714286em !important;
+}
+
+.prose table thead{
+    overflow: auto;
+}
+
+.prose a{
+    width: 100%;
+    white-space: normal;
+    flex-wrap: wrap;
+    text-wrap: balance;
+    word-break: break-word;
+}
