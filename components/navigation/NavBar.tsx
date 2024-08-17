@@ -39,7 +39,7 @@ const NavBar = () => {
     return null;
   }
   return (
-    <div className="top-0 sticky z-10 bg-[#111111] border-b border-b-white/10 flex p-5 py-4 justify-between items-center">
+    <div className="top-0 sticky  z-10 bg-[#111111] border-b border-b-white/10 flex p-5 py-4 justify-between items-center">
       <Link href={"/"} style={{ marginTop: 1, marginLeft: 1 }}>
         <h1
           //   fontWeight="bold"
@@ -55,7 +55,7 @@ const NavBar = () => {
           }}
         >
           <Image
-            src={""}
+            src={CozyCreatorLogo}
             alt="Cozy Creator Logo"
             className="max-md:w-[45px] max-md:h-[45px] w-[50px] h-[50px]"
             style={{

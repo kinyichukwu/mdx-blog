@@ -24,7 +24,7 @@ export default function Drawer({
           (isOpen ? " translate-y-0 " : " -translate-y-full ")
         }
       >
-        <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
+        <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6  h-full overflow-hidden">
           {children}
         </article>
       </section>

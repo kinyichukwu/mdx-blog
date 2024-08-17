@@ -15,7 +15,7 @@ const SideBar = ({ className }: { className?: string }) => {
 
   return (
     <nav
-      className={`${className} max-md:w-full bg-[#111111] text-[#787878] w-[300px] p-4 flex-col border-r border-[#232917] sticky top-0 h-screen min-w-[300px] max-md:pt-20 `}
+      className={`${className} max-md:w-full bg-[#111111] text-[#787878] w-[300px] py-4 px-6  flex-col border-r border-[#232917] sticky top-0 h-screen min-w-[300px] max-md:pt-20 `}
     >
       <div className="flex justify-between items-center">
         <div className="relative my-10">
