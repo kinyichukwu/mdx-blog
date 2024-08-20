@@ -1,7 +1,7 @@
 export const navigations = [
-  { label: "Community", href: "void.tech/community" },
-  { label: "Generate", href: "/generate", query: "m=copax" },
-  { label: "Albums", href: "/albums" },
-  { label: "Docs", href: "/docs" },
+  { label: "Community", href: "https://void.tech/community" },
+  { label: "Generate", href: "https://void.tech/generate", query: "m=copax" },
+  // { label: "Albums", href: "void.tech/albums" },
+  { label: "Docs", href: "" },
   // { label: 'Research', href: Routes.RESEARCH },
 ];

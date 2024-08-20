@@ -1,11 +1,10 @@
 // search mdx files
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 import glob from 'fast-glob';
 
 export const searchMdxFiles = (searchQuery: string) => {
-  const pattern = path.join('src', 'pages', 'docs', '**', '*.mdx');
+  const pattern = path.join('app', '**', '*.mdx');
   const files = glob.sync(pattern, { cwd: process.cwd() });
 
   const results = files.map((filePath) => {
@@ -18,8 +17,8 @@ export const searchMdxFiles = (searchQuery: string) => {
     );
 
     let parsedContent = contentArray.map((content) => {
-      const relativePath = path.relative('src/pages/docs', filePath);
-      const sanitizedPath = relativePath.replace(path.sep, '/').replace('index.mdx', '');
+      const relativePath = path.relative('app', filePath);
+      const sanitizedPath = relativePath.replace(path.sep, '/').replace('page.mdx', '');
 
       return searchQueryInContent(content, sanitizedPath);
     });

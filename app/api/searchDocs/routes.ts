@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { searchMdxFiles } from './searchMdxFiles';
+import { searchMdxFiles } from '../searchMdxFiles/routes';
 
 // http://localhost:3000/api/doc/searchDocs?query=""
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

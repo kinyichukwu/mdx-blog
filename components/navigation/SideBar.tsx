@@ -2,15 +2,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useMediaQuery } from "@mui/material";
-import { useRouter } from "next/router";
 import { theme } from "@/utils/theme";
 import { DocArray, DocItem, useDocs } from "@/context/DocsContext";
+import { usePathname } from "next/navigation";
+import { navigations } from "@/constants";
 
 const SideBar = ({ className }: { className?: string }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const { docs } = useDocs();
 
-  const router = useRouter();
+  const router = usePathname();
 
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState<DocItem[]>([]);
@@ -60,7 +61,7 @@ const SideBar = ({ className }: { className?: string }) => {
 
   const linkClass = (href: string) =>
     `block py-2 px-4 rounded transition duration-200 text-[.875rem]  ${
-      router.pathname === href
+      router === href
         ? "bg-[#232917] text-[#9be100]"
         : "hover:bg-[#232917] text-[#787878] hover:text-[#9be100]"
     }`;
@@ -124,15 +125,27 @@ const SideBar = ({ className }: { className?: string }) => {
 
       <ul className="space-y-2 mb-auto">
         <li>
-          <Link href="/docs" className={linkClass("/docs")}>
+          <Link href="/" className={linkClass("/")}>
             Introduction
           </Link>
         </li>
         <li>
-          <Link href="/docs/research" className={linkClass("/docs/research")}>
+          <Link href="/research" className={linkClass("/research")}>
             AI Research Paper
           </Link>
         </li>
+      </ul>
+
+      <ul className="space-y-2 mb-auto mt-6 border-t border-t-white/10 pt-3 md:hidden">
+        {navigations.map((nav) => {
+          return (
+            <li>
+              <a href={nav.href} className={linkClass(nav.href)}>
+                {nav.label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
