@@ -1,16 +1,37 @@
 [
-    {
-        "title": "Introduction",
-        "path": "/",
-        "filepath": "to be edited",
-        "hasChildren": false,
-        "children": []
-    },
-    {
-        "title": "AI Research",
-        "path": "/research",
-        "filepath": "to be edited",
-        "hasChildren": false,
-        "children": []
-    }
+  {
+    "title": "Introduction",
+    "path": "/",
+    "filepath": "to be edited",
+    "hasChildren": false,
+    "children": []
+  },
+  {
+    "title": "AI Research",
+    "path": "/research",
+    "filepath": "to be edited",
+    "hasChildren": false,
+    "children": []
+  },
+  {
+    "title": "Installation",
+    "path": "/installation",
+    "filepath": "to be edited",
+    "hasChildren": false,
+    "children": []
+  },
+  {
+    "title": "Running",
+    "path": "/running",
+    "filepath": "to be edited",
+    "hasChildren": false,
+    "children": []
+  },
+  {
+    "title": "Configuration",
+    "path": "/configuration",
+    "filepath": "to be edited",
+    "hasChildren": false,
+    "children": []
+  }
 ]

@@ -1,0 +1,39 @@
+### Configuration
+
+Cozy Creator supports multiple configuration formats:
+
+1. Environment variables: These can be set directly or using a `.env` file.
+2. YAML config file: For setting configuration variables.
+3. Secrets directory: Used to load secrets from a specified location.
+
+The most commonly used format is the `.env` file for setting environment variables. However, you can also use a YAML config file for more structured configuration settings.
+
+By default, both of these files are loaded from the `~/.cozy-creator` directory. But you can specify a different location using the, `--env-file`, `--config-file` flag or the `--secrets-dir` flag.
+
+#### Environment Variables
+
+The `.env` file is used to set environment variables. As previously mentioned, they are loaded from the `~/.cozy-creator` directory unless you specify a different location using the `--env-file` flag.
+
+Environment variables must have the `COZY_` prefix added in order to prevent collisions with other environment variables. For example `export COZY_PORT=9000` will work.
+
+See our .env.example file for all available environment variables. Example:
+
+``` cozy run --env-file="~/.cozy-creator/.env" ```
+
+#### Yaml Config File
+
+The yaml config file is used to set configuration variables. It is loaded from the `~/.cozy-creator` directory unless you specify a different location using the `--config-file` flag.
+
+Example:
+
+``` cozy run --config-file="~/.cozy-creator/config.yaml" ```
+
+#### Secrets Directory
+
+The secrets directory is used to load secrets from a directory. It is useful for storing sensitive information.
+
+For the secrets-dir, use:
+
+```sh cozy run --secrets-dir="/run/secrets" ```
+
+export default ({ children }) => <div className="prose dark">{children}</div>;

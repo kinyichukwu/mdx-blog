@@ -1,0 +1,18 @@
+## Running Gen-Server Locally
+
+After installing Cozy Creator, you want to run the gen-server and get it running. To do this, you need to start the gen-server with the command below:
+
+``
+cozy run
+``
+
+On startup, the Cozy Gen Server loads its configuration variables from several possible sources; this is the order of precedence:
+
+1. Command-line arguments (ex; `cozy run --environment=development`)
+2. Environment variables (ex; `export ENVIRONMENT=development`)
+3. .env file (ex; `cozy run --env-file "./.env"`)
+4. Secrets directory (ex; `cozy run --secrets-dir="/run/secrets"`)
+5. Yaml config file (ex; `cozy run --config-file ./config.yaml`)
+6. Default settings
+
+export default ({ children }) => <div className="prose dark">{children}</div>;

@@ -6,6 +6,9 @@ import { theme } from "@/utils/theme";
 import { DocArray, DocItem, useDocs } from "@/context/DocsContext";
 import { usePathname } from "next/navigation";
 import { navigations } from "@/constants";
+import * as RouteData from "@/app/_meta.json";
+
+console.log(RouteData[0], "route data");
 
 const SideBar = ({ className }: { className?: string }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -124,16 +127,19 @@ const SideBar = ({ className }: { className?: string }) => {
       </div>
 
       <ul className="space-y-2 mb-auto">
-        <li>
-          <Link href="/" className={linkClass("/")}>
-            Introduction
-          </Link>
-        </li>
+        {RouteData.map((_route) => {
+          return (
+            <Link href={_route.path} className={linkClass(_route.path)}>
+              {_route.title}
+            </Link>
+          );
+        })}
+        {/* <li></li>
         <li>
           <Link href="/research" className={linkClass("/research")}>
             AI Research Paper
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       <ul className="space-y-2 mb-auto mt-6 border-t border-t-white/10 pt-3 md:hidden">

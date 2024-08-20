@@ -1,0 +1,35 @@
+## Installation
+
+To install Cozy Creator, you need to get the source code and install the gen-server. The gen-server is the core engine that runs the generative AI models, while the other packages extend functionality of the gen-server by adding plugins to the current environment; on startup the gen-server will automatically load all compatible plugins in its environment.
+
+Before you can install the gen-server, you need to install Python and the required dependencies. Most of the dependencies needed will be installed automatically when you install the gen-server, but you may need to install pytorch and other dependencies manually.
+
+Installing Pytorch is a bit more involved, as it depends on your system. See [here](https://pytorch.org/get-started/locally/) for instructions specific to your system.
+
+#### Gen-server
+
+To install the gen-server, navigate to the `/packages/gen_server` folder and run:
+`pip install -e .`
+
+This adds the `cozy` command to your path and generates a `.egg-info` folder. The code will be installed in editable format, which means any changes to the code will be immediately reflected the next time you run it.
+
+#### Core Extensions
+
+To install the core extensions, navigate to the `/packages/core_extensions` folder and run:
+`pip install -e .`
+This will install the extensions in editable format and they will be automatically loaded when you start the gen-server.
+
+> **Note:** New modules or renamed modules will not be reflected until you run `pip install -e .` again.
+
+#### Go-Cozy
+
+#### Web
+
+The web package is a web-based user interface for managing and running models and workflows. To install it, navigate to the `/web` folder and run:
+`yarn install`
+You can also install the dependencies with `npm install` or any other package manager of your choice.
+
+Then, to build the web bundle, run:
+`yarn build`
+
+export default ({ children }) => <div className="prose dark">{children}</div>;
